@@ -1,0 +1,10 @@
+<h2 class="mat-headline">{{data.title}}</h2>
+<div>
+  <p>
+    {{data.message}}
+  </p>
+  <div fxLayout="row" fxLayoutGap="20px" style="margin-top: 20px;">
+    <button mat-raised-button class="lam-button dialog-btn" [mat-dialog-close]="true">Yes</button>
+    <button mat-raised-button class="lam-button dialog-btn" [mat-dialog-close]="false">No</button>
+  </div>
+</div>

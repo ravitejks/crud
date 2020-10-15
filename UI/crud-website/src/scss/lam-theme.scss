@@ -1,0 +1,92 @@
+@import '~@angular/material/theming';
+
+// Be sure to include this mixin only once!
+@include mat-core();
+
+/* Color Palette generated using http://mcg.mbitson.com
+    For use in src/lib/core/theming/_palette.scss */
+
+$lam-cyan: (
+    50 : #e0f0f5,
+    100 : #b3d9e6,
+    200 : #80bfd6,
+    300 : #4da5c6,
+    400 : #2692b9,
+    500 : #007fad,
+    600 : #0077a6,
+    700 : #006c9c,
+    800 : #006293,
+    900 : #004f83,
+    A100 : #b0dbff,
+    A200 : #7dc3ff,
+    A400 : #4aabff,
+    A700 : #30a0ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$lam-red: (
+    50 : #f6e0e4,
+    100 : #e7b3bc,
+    200 : #d88090,
+    300 : #c84d63,
+    400 : #bc2641,
+    500 : #b00020,
+    600 : #a9001c,
+    700 : #a00018,
+    800 : #970013,
+    900 : #87000b,
+    A100 : #ffb3b6,
+    A200 : #ff8085,
+    A400 : #ff4d53,
+    A700 : #ff343b,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+$lam-app-primary: mat-palette($lam-cyan, 900);
+$lam-app-accent:  mat-palette($mat-cyan, 800, 600, 900);
+$lam-app-warn:    mat-palette($lam-red);
+$lam-app-theme: mat-light-theme($lam-app-primary, $lam-app-accent, $lam-app-warn);
+@include angular-material-theme($lam-app-theme);
+
+//Set typography to use Titillium Web
+$typography: mat-typography-config(
+  $font-family: 'Titillium Web, sans-serif',
+  $button: mat-typography-level(16px, 24px, 500)
+);
+@include angular-material-typography($typography);
+
+
+// Export theme colors for other components
+$app-primary: mat-color($lam-app-primary);
+$app-accent: mat-color($lam-app-accent);
+$app-warn: mat-color($lam-app-warn);

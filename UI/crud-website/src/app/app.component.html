@@ -1,0 +1,32 @@
+<header>
+  <mat-toolbar class="app-suite-toolbar">
+    <a id="aAppHome" routerLink="/home">
+      <img id="imgAppHome"  class="lam-logo" src="./assets/images/lam_logo_wh.png" alt="Lam Research">
+    </a>
+    <h1>AppName</h1>
+    <span class="fill-remaining-space"></span>
+    <span>{{loggedInUser ? loggedInUser.FullName : ''}}</span>
+  </mat-toolbar>
+</header>
+<main>
+  <div class="app-body">
+    <div #home *ngIf="isUserDataAvailable; else authentication_pending" class="home">
+      <router-outlet></router-outlet>
+    </div>
+    <ng-template #authentication_pending>
+      <div *ngIf="!userAuthFailed" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1px">
+        <img src="assets/images/authenticating.gif" alt="authenticating" />
+        <h2>Waiting for Authentication...</h2>
+        <h2>This is automatic process and should not take long.</h2>
+        <h2>Please contact SCM if it takes more than a minute</h2>
+      </div>
+    </ng-template>
+    <!-- <router-outlet></router-outlet> -->
+  </div>
+</main>
+<footer class="footer"> 
+  <div class="copyright">
+    <div>Copyright © 2020, Lam Research Corporation. All rights reserved.</div>
+    <div>Powered by Lam Research - Equipment Intelligence® Manager</div>
+  </div>
+</footer>

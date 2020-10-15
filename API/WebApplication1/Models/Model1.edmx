@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WebApplication1.Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="WebApplication1ModelsStoreContainer">
+    <EntitySet Name="Hackathon" EntityType="WebApplication1.Models.Store.Hackathon" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Internship" EntityType="WebApplication1.Models.Store.Internship" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Poster" EntityType="WebApplication1.Models.Store.Poster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Unlock" EntityType="WebApplication1.Models.Store.Unlock" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Hackathon">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Idea_Name" Type="varchar" MaxLength="100" />
+    <Property Name="Owner" Type="varchar" MaxLength="100" />
+    <Property Name="Problem" Type="varchar" MaxLength="100" />
+    <Property Name="Solution" Type="varchar" MaxLength="100" />
+    <Property Name="Benefit" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Internship">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Idea_Name" Type="varchar" MaxLength="100" />
+    <Property Name="Owner" Type="varchar" MaxLength="100" />
+    <Property Name="Task" Type="varchar" MaxLength="100" />
+    <Property Name="Duration" Type="int" />
+  </EntityType>
+  <EntityType Name="Poster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Idea_Name" Type="varchar" MaxLength="100" />
+    <Property Name="Owner" Type="varchar" MaxLength="100" />
+    <Property Name="Problem" Type="varchar" MaxLength="100" />
+    <Property Name="Solution" Type="varchar" MaxLength="100" />
+    <Property Name="Benefit" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Unlock">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Idea_Name" Type="varchar" MaxLength="100" />
+    <Property Name="Owner" Type="varchar" MaxLength="100" />
+    <Property Name="Problem" Type="varchar" MaxLength="100" />
+    <Property Name="Benefit" Type="varchar" MaxLength="100" />
+  </EntityType>
+</Schema>
+	</edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WebApplication1.Models" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CONTAINER" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Hackathon" EntityType="WebApplication1.Models.Hackathon" />
+    <EntitySet Name="Internship" EntityType="WebApplication1.Models.Internship" />
+    <EntitySet Name="Poster" EntityType="WebApplication1.Models.Poster" />
+    <EntitySet Name="Unlock" EntityType="WebApplication1.Models.Unlock" />
+  </EntityContainer>
+  <EntityType Name="Hackathon">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Idea_Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Owner" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Problem" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Solution" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Benefit" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Internship">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Idea_Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Owner" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Task" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Duration" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Poster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Idea_Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Owner" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Problem" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Solution" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Benefit" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Unlock">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Idea_Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Owner" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Problem" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Benefit" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>
+	</edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebApplication1ModelsStoreContainer" CdmEntityContainer="CONTAINER">
+    <EntitySetMapping Name="Hackathon">
+      <EntityTypeMapping TypeName="WebApplication1.Models.Hackathon">
+        <MappingFragment StoreEntitySet="Hackathon">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Idea_Name" ColumnName="Idea_Name" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Problem" ColumnName="Problem" />
+          <ScalarProperty Name="Solution" ColumnName="Solution" />
+          <ScalarProperty Name="Benefit" ColumnName="Benefit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Internship">
+      <EntityTypeMapping TypeName="WebApplication1.Models.Internship">
+        <MappingFragment StoreEntitySet="Internship">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Idea_Name" ColumnName="Idea_Name" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Task" ColumnName="Task" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Poster">
+      <EntityTypeMapping TypeName="WebApplication1.Models.Poster">
+        <MappingFragment StoreEntitySet="Poster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Idea_Name" ColumnName="Idea_Name" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Problem" ColumnName="Problem" />
+          <ScalarProperty Name="Solution" ColumnName="Solution" />
+          <ScalarProperty Name="Benefit" ColumnName="Benefit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Unlock">
+      <EntityTypeMapping TypeName="WebApplication1.Models.Unlock">
+        <MappingFragment StoreEntitySet="Unlock">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Idea_Name" ColumnName="Idea_Name" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Problem" ColumnName="Problem" />
+          <ScalarProperty Name="Benefit" ColumnName="Benefit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
+	</edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

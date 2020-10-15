@@ -1,0 +1,18 @@
+.form-align {
+  margin: 0 20px;
+}
+
+.card-header {
+  font-size: 16px;
+  color: grey;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.child-container {
+  flex: 0 0 23%;
+  margin: 10px 14px;
+}

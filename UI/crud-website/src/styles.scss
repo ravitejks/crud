@@ -1,0 +1,24 @@
+// Load the lam material theme
+@import './scss/lam-theme';
+
+// Load lam angular app styles
+@import './scss/lam-app-styles';
+
+// @import "~ag-grid/dist/styles/ag-grid.css";
+// @import "~ag-grid/dist/styles/ag-theme-material.css";
+
+// @import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+
+// .ag-theme-alpine {
+  //     @include ag-theme-alpine();
+  // }
+
+// @import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+// @import "../node_modules/ag-grid-community/src/styles/ag-theme-material/sass/ag-theme-material.scss";
+
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-material.css";
+
+.ag-theme-material .ag-icon-checkbox-checked {
+    color: mat-color($lam-app-primary);
+}

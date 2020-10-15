@@ -1,0 +1,270 @@
+html,
+body {
+  display: flex;
+  flex: auto;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+main {
+  min-height: calc(100vh - 90px);
+}
+
+.lam-logo {
+  height: 25px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-left: 5px;
+}
+
+.page-header {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+}
+
+.page-body {
+  padding: 20px 20px 10px 20px;
+}
+
+footer {
+  bottom: 0;
+  min-width: 100%;
+  color: white;
+  background-color: #343a40;
+  height: 45px;
+  font-size: 12px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.version-info {
+  position: absolute;
+  top: 50;
+  right: 0;
+  margin-right: 30px;
+}
+
+.copyright {
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mat-snack-bar-container {
+  padding: 14px 40px !important;
+  min-width: auto !important;
+}
+
+.app-body {
+  padding: 0;
+  margin: 0;
+  min-height: calc(100vh - 64px - 54px);
+}
+
+.app-footer {
+  padding: 3px;
+}
+
+.app-suite-toolbar {
+  background: mat-color($lam-cyan, 900);
+  color: white;
+  max-height: 45px;
+}
+
+.app-primary-toolbar {
+  background: mat-color($lam-cyan, 500);
+  color: white;
+  max-height: 45px;
+}
+
+.app-secondary-toolbar {
+  // background-color: $app-accent;
+  background: mat-color($lam-cyan, 500);
+  color: white;
+  max-height: 40px;
+}
+
+.app-page-toolbar {
+  max-height: 40px;
+}
+
+.app-alert-banner {
+  max-height: 40px;
+}
+
+.lam-app-card {
+  background: mat-color($lam-cyan, 500);
+  /* Primary */
+}
+
+.lam-app-card-title {
+  background: mat-color($lam-cyan, 500);
+  /* Primary */
+  color: white;
+}
+
+.lam-button {
+  color: white;
+  background: mat-color($lam-cyan, 500);
+  /* Primary */
+}
+
+a.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  font-size: 14px;
+  color: $app-primary;
+  /*Primary Variant */
+}
+
+a.nav-link.mat-list-item {
+  color: $app-primary;
+  font-size: 14px;
+}
+
+a.nav-link.mat-list-item.active {
+  background-color: $app-primary;
+  /*Primary Variant */
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+}
+
+a.nav-link.active:hover {
+  background-color: $app-primary;
+  opacity: 0.80;
+  /*Primary Variant */
+}
+
+.mat-hint {
+  padding-bottom: 1px;
+}
+
+/*h1{
+  font: size 96sp;
+  letter-spacing: -1.5;
+}
+
+h2{
+  font: size 60sp;
+  letter-spacing: -0.5;
+}
+
+h3{
+  font: size 48sp;
+  letter-spacing: 0;
+}
+
+h4{
+  font: size 34sp;
+  letter-spacing: 0.25;
+}
+
+h5{
+  font: size 24sp;
+  letter-spacing: 0;
+}
+
+h6{
+  font: size 20sp;
+  letter-spacing: 0.15;
+}*/
+
+button {
+  text-transform: uppercase;
+  border-radius: 3px !important;
+  color: white;
+  background: mat-color($lam-cyan, 500);
+  /* Primary */
+}
+
+a {
+  text-decoration: none;
+}
+
+.mat-snack-bar-container {
+  padding: 14px 40px !important;
+  min-width: auto !important;
+}
+
+.success-snackbar {
+  background-color: $app-primary;
+  color: white;
+}
+
+.error-snackbar {
+  background-color: $app-warn;
+  color: white;
+}
+
+.warn-snackbar {
+  background-color: orange;
+  color: black;
+}
+
+.mat-sort-header-button {
+  text-transform: none;
+}
+
+// .ag-header-cell-label {
+//   cursor: pointer;
+// }
+
+// .ag-cell-focus,
+// .ag-cell-no-focus {
+//   border: none !important;
+// }
+
+// .no-border.ag-cell:focus {
+//   border: none !important;
+//   outline: none;
+// }
+
+// AG grid start
+.ag-header-cell-text {
+  cursor: pointer;
+}
+
+.ag-body-viewport {
+  overflow: hidden;
+}
+
+.ag-theme-material .ag-cell {
+  padding: 0 0 0 5px;
+  border: 1px solid transparent;
+}
+// AG grid end
+
+@media (min-width:768px) {
+  body {
+    display: flex;
+    flex: 1 0 auto;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  header {
+    max-height: 64px;
+  }
+
+  footer {
+    flex: 1 0 auto;
+  }
+
+  .app-body {
+    padding: 0;
+    margin: 0;
+    min-height: calc(100vh - 65px - 35px);
+  }
+}

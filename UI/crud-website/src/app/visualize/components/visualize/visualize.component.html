@@ -1,0 +1,30 @@
+<mat-toolbar class="app-secondary-toolbar" fxLayoutAlign="space-between center">
+  <div>
+    <!-- <h2>Table1</h2> -->
+    <mat-form-field>
+      <mat-select  [(ngModel)]="selectedTable" (selectionChange)="onTableSelectionChange($event.value)"
+        class="table-selection">
+        <mat-option *ngFor="let table of tableNames" [(value)]="table">
+          {{table}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div style="margin-right:2%">
+    <button mat-button (click)="addRow()">
+      Add Row
+    </button>
+  </div>
+</mat-toolbar>
+<div class="grid-container">
+  <ag-grid-angular
+    [gridOptions]="gridOptions"
+    [columnDefs]="columnDefs"
+    rowSelection="multiple"
+    resizeble=true
+    suppressRowClickSelection="true"
+    rowHeight="38"
+    animateRows=true
+    class="grid-width ag-theme-material">
+  </ag-grid-angular>
+</div>
